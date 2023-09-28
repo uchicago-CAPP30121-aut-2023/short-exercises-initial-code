@@ -10,4 +10,4 @@ These are the files for Short Exercise #0.
 
 - pytest.ini: A configuration file that you can safely ignore.
 
-- README: This file.
+- README.txt: This file.
