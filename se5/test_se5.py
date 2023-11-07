@@ -187,7 +187,7 @@ def check_tree_helper(t, expected_t, top_msg, recreate_msg):
 # # #
 
 def do_test_sum_of_powers(p, N, expected):
-    recreate_msg = gen_recreate_msg(MODULE, "value_of", (p, N))
+    recreate_msg = gen_recreate_msg(MODULE, "sum_of_powers", (p, N))
     actual = se5.sum_of_powers(p, N)
     check_none(actual, recreate_msg)
     check_type(actual, expected, recreate_msg)
@@ -250,7 +250,42 @@ def test_sum_of_powers_1():
     N = 2
     do_test_sum_of_powers(p, N, calculate_solution(p, N))
 
-# FIRST NEGATIVE
+def test_sum_of_powers_2():
+    p = 1
+    N = 2
+    do_test_sum_of_powers(p, N, calculate_solution(p, N))
+
+def test_sum_of_powers_3():
+    p = 2
+    N = 1
+    do_test_sum_of_powers(p, N, calculate_solution(p, N))
+
+def test_sum_of_powers_4():
+    p = 2
+    N = 3
+    do_test_sum_of_powers(p, N, calculate_solution(p, N))
+
+def test_sum_of_powers_5():
+    p = 2
+    N = 5
+    do_test_sum_of_powers(p, N, calculate_solution(p, N))
+
+def test_sum_of_powers_6():
+    p = 2
+    N = 7
+    do_test_sum_of_powers(p, N, calculate_solution(p, N))
+
+def test_sum_of_powers_7():
+    p = 4
+    N = 3
+    do_test_sum_of_powers(p, N, calculate_solution(p, N))
+
+def test_sum_of_powers_8():
+    p = 6
+    N = 3
+    do_test_sum_of_powers(p, N, calculate_solution(p, N))
+
+# VALUE OF FIRST NEGATIVE
 def test_value_of_1():
     lst = [-1]
     do_test_value_of(lst, -1)
@@ -332,7 +367,7 @@ def test_index_of_10():
     lst = []
     do_test_index_of(lst, -1)
 
-# MIN DEPTH
+# MIN DEPTH OF A LEAF
 # Test 1:
 def test_min_depth_leaf_1():
     a = Tree('A', 10)
